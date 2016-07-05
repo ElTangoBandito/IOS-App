@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9DA248ED8834CA350CAE5608034226D6440D6D81",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9DA248ED8834CA350CAE5608034226D6440D6D81" : 0,
+    "32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1B77D05F-400D-49CF-949F-486FD355B229",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9DA248ED8834CA350CAE5608034226D6440D6D81" : "IOS-App\/",
+    "32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764" : "ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TextFields",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TextFields\/TextFields.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/udacity\/ios-nanodegree-uikit-2.0.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "32DB2AE76EBCD6D3DE3258C1B15BF45A6A20F764"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ElTangoBandito\/IOS-App",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9DA248ED8834CA350CAE5608034226D6440D6D81"
+    }
+  ]
+}

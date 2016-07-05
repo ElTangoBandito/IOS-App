@@ -37,11 +37,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //self.textField2.delegate = colorizerDelegate
         self.textField2.delegate = cashFieldD
         self.textField3.delegate = self
+        
+        self.textSwitch.setOn(false, animated:false)
     }
 
     
     // Text Field Delegate Methods
-    
+    /*
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 
         // Figure out what the new text will be, if we return true
@@ -57,5 +59,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // returning true gives the text field permission to change its text
         return true;
     }
+ */
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return self.textSwitch.on
+    }
+    
+    
+    @IBAction func enableEdit(sender: AnyObject){
+    
+        if !(sender as! UISwitch).on {
+            self.textField3.resignFirstResponder()
+        }
+    }
+    
 }
 
