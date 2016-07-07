@@ -14,6 +14,7 @@
 		A805F3391D22F63C0033C03E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A805F3371D22F63C0033C03E /* LaunchScreen.xib */; };
 		A805F3451D22F63C0033C03E /* Roshambo_attemptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F3441D22F63C0033C03E /* Roshambo_attemptTests.swift */; };
 		A805F3511D22F7B10033C03E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F3501D22F7B10033C03E /* ResultViewController.swift */; };
+		A81259C01D2EC3CC00BE0F9F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81259BF1D2EC3CC00BE0F9F /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A805F3431D22F63C0033C03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A805F3441D22F63C0033C03E /* Roshambo_attemptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roshambo_attemptTests.swift; sourceTree = "<group>"; };
 		A805F3501D22F7B10033C03E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A81259BF1D2EC3CC00BE0F9F /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		A805F32B1D22F63C0033C03E /* Roshambo attempt */ = {
 			isa = PBXGroup;
 			children = (
+				A81259BF1D2EC3CC00BE0F9F /* HistoryViewController.swift */,
 				A805F32E1D22F63C0033C03E /* AppDelegate.swift */,
 				A805F3501D22F7B10033C03E /* ResultViewController.swift */,
 				A805F3301D22F63C0033C03E /* SelectionViewController.swift */,
@@ -219,6 +222,7 @@
 				A805F3311D22F63C0033C03E /* SelectionViewController.swift in Sources */,
 				A805F32F1D22F63C0033C03E /* AppDelegate.swift in Sources */,
 				A805F3511D22F7B10033C03E /* ResultViewController.swift in Sources */,
+				A81259C01D2EC3CC00BE0F9F /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

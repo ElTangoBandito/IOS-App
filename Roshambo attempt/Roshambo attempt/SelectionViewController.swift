@@ -8,10 +8,13 @@
 
 import UIKit
 
+
 class SelectionViewController: UIViewController {
 
     enum ButtonType:Int {case Paper = 0, Scissors}
     var choice: String!
+    var userPick : [String]!
+    var result : [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,7 @@ class SelectionViewController: UIViewController {
     }
     
     @IBAction private func selectRock(sender: UIButton){
-        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as ResultViewController!
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController!
         controller.userInput = "Rock"
         presentViewController(controller, animated: true, completion: nil)
     }
@@ -35,12 +38,17 @@ class SelectionViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "play"){
-            chooseText(sender as UIButton)
-            let controller = segue.destinationViewController as ResultViewController
+            chooseText(sender as! UIButton)
+            let controller = segue.destinationViewController as! ResultViewController
             controller.userInput = choice
         }
     }
-    
+/*
+    @IBAction private func viewHistory(sender: UIButton) {
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController") as! HistoryViewController!
+        presentViewController(controller, animated: true, completion: nil)
+    }
+ */
     private func chooseText(sender: UIButton){
         switch(ButtonType(rawValue: sender.tag)!){
         case .Scissors:

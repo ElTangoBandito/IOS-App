@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Selection View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SelectionViewController" customModule="Roshambo_attempt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectionViewController" id="vXZ-lx-hvc" customClass="SelectionViewController" customModule="Roshambo_attempt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -34,7 +36,7 @@
                                     <segue destination="ueN-Ab-Fdn" kind="modal" identifier="play" id="aT7-bm-7oh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-JX-l1l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's Play!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-JX-l1l">
                                 <rect key="frame" x="264" y="449" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.80120584239130432" green="0.47937957154724203" blue="0.25169545826221651" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,6 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="536" y="371"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="hcZ-Dz-9zI">
@@ -78,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tie" translatesAutoresizingMaskIntoConstraints="NO" id="9B4-D9-clO" userLabel="Image">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rock-scissors" translatesAutoresizingMaskIntoConstraints="NO" id="9B4-D9-clO" userLabel="Image">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4U-u8-mqv">
@@ -93,14 +96,23 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="493-hS-mhP">
                                 <rect key="frame" x="279" y="408" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqu-KZ-lCe">
+                                <rect key="frame" x="271" y="475" width="58" height="30"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="historyView" destination="ueN-Ab-Fdn" eventType="touchUpInside" id="qQ3-2o-yUf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Iqu-KZ-lCe" firstAttribute="top" secondItem="9B4-D9-clO" secondAttribute="bottom" constant="75" id="5WR-hQ-H4r"/>
                             <constraint firstAttribute="centerX" secondItem="9B4-D9-clO" secondAttribute="centerX" id="7ii-KK-E8W"/>
                             <constraint firstAttribute="centerY" secondItem="9B4-D9-clO" secondAttribute="centerY" id="BFJ-BC-6sb"/>
+                            <constraint firstItem="Iqu-KZ-lCe" firstAttribute="centerX" secondItem="44F-VC-kaJ" secondAttribute="centerX" id="fIE-7e-6ke"/>
                             <constraint firstItem="s4U-u8-mqv" firstAttribute="bottom" secondItem="493-hS-mhP" secondAttribute="bottom" constant="38" id="gUS-sd-dEn"/>
                             <constraint firstAttribute="centerX" secondItem="493-hS-mhP" secondAttribute="centerX" id="jcU-3m-UeK"/>
                             <constraint firstAttribute="centerX" secondItem="s4U-u8-mqv" secondAttribute="centerX" id="vJN-iL-K6c"/>
@@ -114,13 +126,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNB-Zv-CMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824" y="136"/>
+            <point key="canvasLocation" x="1360" y="362"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="6pO-e1-SOZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaF-7h-vhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="HistoryViewController" id="OYU-ly-rPw" customClass="HistoryViewController" customModule="Roshambo_attempt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6oF-a3-bIQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="nUq-x8-mdH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ssx-4L-JKr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-3Z-FFg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" textLabel="GQV-jv-BFs" detailTextLabel="pME-Ke-yfM" style="IBUITableViewCellStyleValue1" id="nQc-sq-KxH">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nQc-sq-KxH" id="vb7-sH-bJG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GQV-jv-BFs">
+                                                    <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pME-Ke-yfM">
+                                                    <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OYU-ly-rPw" id="PAf-E3-RPS"/>
+                                    <outlet property="delegate" destination="OYU-ly-rPw" id="Sq4-k0-agd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fVl-3Z-FFg" firstAttribute="leading" secondItem="ssx-4L-JKr" secondAttribute="leadingMargin" constant="-16" id="0R3-Hp-6av"/>
+                            <constraint firstItem="fVl-3Z-FFg" firstAttribute="top" secondItem="ssx-4L-JKr" secondAttribute="topMargin" id="CDG-gC-iwV"/>
+                            <constraint firstItem="nUq-x8-mdH" firstAttribute="top" secondItem="fVl-3Z-FFg" secondAttribute="bottom" id="TO3-Ic-uhf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fVl-3Z-FFg" secondAttribute="trailing" constant="-16" id="eHe-1T-HVf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="536" y="1104"/>
         </scene>
     </scenes>
     <resources>
         <image name="Paper" width="75" height="65"/>
         <image name="Rock" width="75" height="65"/>
         <image name="Scissor" width="75" height="65"/>
-        <image name="tie" width="91" height="100"/>
+        <image name="rock-scissors" width="256" height="192"/>
     </resources>
 </document>
