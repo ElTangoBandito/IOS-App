@@ -162,6 +162,7 @@
 		A8E64E721D19A123003C8BED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Hsu, KuoCheng";
 				TargetAttributes = {

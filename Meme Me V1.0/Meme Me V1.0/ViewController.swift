@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
     
     struct Meme {
         var topText: String
@@ -17,11 +17,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var memeImage: UIImage
     }
     
+    @IBOutlet weak var toolBarTop: UIToolbar!
+    @IBOutlet weak var toolBarBottom: UIToolbar!
     @IBOutlet weak var top: UITextField!
     @IBOutlet weak var bottom: UITextField!
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     let memeTextAttributes = [
         NSStrokeColorAttributeName : UIColor.blackColor(),
@@ -41,6 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.bottom.defaultTextAttributes = memeTextAttributes
         self.top.textAlignment = NSTextAlignment.Center
         self.bottom.textAlignment = NSTextAlignment.Center
+        self.doneButton.enabled = false
         
     }
 
@@ -66,6 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(pickerController, animated: true, completion: nil)
+        self.doneButton.enabled = true
     }
     
     @IBAction func takeAPicture(sender: AnyObject) {
@@ -75,11 +79,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func finished(sender: AnyObject) {
+        let image = self.save()
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             imagePickerView.image = image
-            imagePickerView.sizeToFit()
+            imagePickerView.contentMode = UIViewContentMode.ScaleToFill
             //imagePickerView.centerXAnchor
             //imagePickerView.centerYAnchor
         }
@@ -126,18 +137,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.unsubscribedFromKeyboardNotificationsHide()
     }
     
-    func save(){
+    func save() ->UIImage{
         let memedImage = generateMemedImage()
         let meme = Meme(topText: top.text!, bottomText: bottom.text!, originalImage: imagePickerView.image!, memeImage: memedImage)
+        self.imagePickerView.image = generateMemedImage()
+        return memedImage
+        
     }
     
     func generateMemedImage() -> UIImage{
+        self.toolBarTop.hidden = true
+        self.toolBarBottom.hidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        self.toolBarTop.hidden = false
+        self.toolBarBottom.hidden = false
         
         return memedImage
     }
+    
 }
 
