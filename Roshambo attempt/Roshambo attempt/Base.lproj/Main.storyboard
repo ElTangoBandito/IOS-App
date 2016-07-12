@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LGW-BE-nSQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2p2-xP-aPf">
+            <objects>
+                <navigationController id="LGW-BE-nSQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UMW-K9-Tla">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="DAw-56-dEn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQG-or-gr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="412"/>
+        </scene>
         <!--Selection View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -33,7 +49,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ueN-Ab-Fdn" kind="modal" identifier="play" id="aT7-bm-7oh"/>
+                                    <segue destination="ueN-Ab-Fdn" kind="push" identifier="play" id="aT7-bm-7oh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let's Play!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-JX-l1l">
@@ -64,6 +80,7 @@
                             <constraint firstItem="vW9-Ey-E4X" firstAttribute="top" secondItem="Dqv-yd-F3c" secondAttribute="bottom" constant="37" id="rKR-cZ-2Bo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FN2-gZ-Rz3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +136,7 @@
                             <constraint firstItem="493-hS-mhP" firstAttribute="bottom" secondItem="9B4-D9-clO" secondAttribute="bottom" constant="29" id="zuV-CB-04P"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4Be-aQ-KE3"/>
                     <connections>
                         <outlet property="resultImage" destination="9B4-D9-clO" id="QxI-xI-wgy"/>
                         <outlet property="resultMessage" destination="493-hS-mhP" id="b7z-ko-Dad"/>
@@ -131,7 +149,6 @@
         <!--History View Controller-->
         <scene sceneID="6pO-e1-SOZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FaF-7h-vhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HistoryViewController" id="OYU-ly-rPw" customClass="HistoryViewController" customModule="Roshambo_attempt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6oF-a3-bIQ"/>
@@ -185,6 +202,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaF-7h-vhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="536" y="1104"/>
         </scene>

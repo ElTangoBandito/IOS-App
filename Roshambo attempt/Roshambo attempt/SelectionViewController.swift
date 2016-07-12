@@ -27,7 +27,9 @@ class SelectionViewController: UIViewController {
     @IBAction private func selectRock(sender: UIButton){
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController!
         controller.userInput = "Rock"
-        presentViewController(controller, animated: true, completion: nil)
+        let navigationController = self.navigationController
+        navigationController?.pushViewController(controller, animated: true)
+        //presentViewController(controller, animated: true, completion: nil)
     }
     //segue: UIStoryboardSegue,
     @IBAction private func selectPaper(sender: UIButton){

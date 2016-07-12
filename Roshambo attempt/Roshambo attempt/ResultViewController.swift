@@ -68,6 +68,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Play Again", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ResultViewController.playAgain2))
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,7 +85,15 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction private func playAgain() {
-
-        dismissViewControllerAnimated(true, completion: nil)
+        if let navigationController = self.navigationController{
+            navigationController.popToRootViewControllerAnimated(true)
+        }
+        //dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @objc private func playAgain2() {
+        if let navigationController = self.navigationController{
+            navigationController.popToRootViewControllerAnimated(true)
+        }
     }
 }
