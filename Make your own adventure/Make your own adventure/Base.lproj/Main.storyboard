@@ -86,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Apples are bad" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wcf-8F-Plb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Apples are bad, now pick a good color." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wcf-8F-Plb">
                                 <rect key="frame" x="180" y="150" width="240" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -98,11 +98,17 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeJ-BX-UJs">
                                 <rect key="frame" x="277" y="453" width="46" height="30"/>
-                                <state key="normal" title="apple"/>
+                                <state key="normal" title="yellow"/>
+                                <connections>
+                                    <segue destination="AWG-bD-W2f" kind="show" id="XhM-qn-xYo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FX4-Fg-B52">
                                 <rect key="frame" x="277" y="518" width="46" height="30"/>
-                                <state key="normal" title="orange"/>
+                                <state key="normal" title="brown"/>
+                                <connections>
+                                    <segue destination="yTL-iG-v1N" kind="show" id="fLW-si-ukC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud1-bW-qTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="223"/>
+            <point key="canvasLocation" x="761" y="-457"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JzL-0I-fML">
@@ -133,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Oranges are the fruit of the devils" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-Jn-gQT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Oranges are the fruit of the devils. Speaking of devils, do you worship a devil?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-Jn-gQT">
                                 <rect key="frame" x="180" y="150" width="240" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -145,11 +151,17 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-7J-CoO">
                                 <rect key="frame" x="277" y="453" width="46" height="30"/>
-                                <state key="normal" title="apple"/>
+                                <state key="normal" title="Yes"/>
+                                <connections>
+                                    <segue destination="Pj2-4A-VpI" kind="show" id="tQG-G5-g5Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c27-1z-NiO">
                                 <rect key="frame" x="277" y="518" width="46" height="30"/>
-                                <state key="normal" title="orange"/>
+                                <state key="normal" title="No"/>
+                                <connections>
+                                    <segue destination="b2t-jV-m9C" kind="show" id="4g5-GO-fdZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,7 +178,147 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcn-1D-eKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="809" y="952"/>
+            <point key="canvasLocation" x="785" y="957"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="To2-9j-1Dd">
+            <objects>
+                <viewController id="AWG-bD-W2f" customClass="ViewController" customModule="Make_your_own_adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgq-66-UwT"/>
+                        <viewControllerLayoutGuide type="bottom" id="CCR-CP-NC2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UY7-Id-wyM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Yellow is a terrible color, and you're just as yellow." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2iQ-Zb-MnD">
+                                <rect key="frame" x="180" y="150" width="240" height="158"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="QKi-SK-fem"/>
+                                    <constraint firstAttribute="width" constant="240" id="gc0-BW-ecG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2iQ-Zb-MnD" firstAttribute="top" secondItem="fgq-66-UwT" secondAttribute="bottom" constant="86" id="G8X-KF-T0p"/>
+                            <constraint firstItem="2iQ-Zb-MnD" firstAttribute="centerX" secondItem="UY7-Id-wyM" secondAttribute="centerX" id="R4X-Ss-3fG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Eg-Om-j9Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zX-QD-Oh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="-599"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eMP-XT-IPM">
+            <objects>
+                <viewController id="yTL-iG-v1N" customClass="ViewController" customModule="Make_your_own_adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="njI-di-Vdm"/>
+                        <viewControllerLayoutGuide type="bottom" id="NTb-dY-XXi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q33-Dl-bVp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Brown is a terrific color." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-6h-zLj">
+                                <rect key="frame" x="180" y="150" width="240" height="158"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Px4-fR-yi4"/>
+                                    <constraint firstAttribute="height" constant="158" id="pDy-to-3qg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c4g-6h-zLj" firstAttribute="centerX" secondItem="q33-Dl-bVp" secondAttribute="centerX" id="aB6-ru-aad"/>
+                            <constraint firstItem="c4g-6h-zLj" firstAttribute="top" secondItem="njI-di-Vdm" secondAttribute="bottom" constant="86" id="c23-nF-6hF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sEk-aM-cZc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XS8-Sh-PNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="83"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="75P-fb-KEP">
+            <objects>
+                <viewController id="Pj2-4A-VpI" customClass="ViewController" customModule="Make_your_own_adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W7B-BE-1Gg"/>
+                        <viewControllerLayoutGuide type="bottom" id="NAi-Ad-UKs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zXe-ru-L5H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Never mention that outloud." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nLh-P2-hOQ">
+                                <rect key="frame" x="180" y="150" width="240" height="158"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Coi-66-Kl0"/>
+                                    <constraint firstAttribute="height" constant="158" id="WLA-E7-F4E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nLh-P2-hOQ" firstAttribute="top" secondItem="W7B-BE-1Gg" secondAttribute="bottom" constant="86" id="Qwn-bE-Iv4"/>
+                            <constraint firstItem="nLh-P2-hOQ" firstAttribute="centerX" secondItem="zXe-ru-L5H" secondAttribute="centerX" id="zLh-ga-JYp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n72-WF-s0H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5d-VC-WV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="788"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jl7-Vl-fj3">
+            <objects>
+                <viewController id="b2t-jV-m9C" customClass="ViewController" customModule="Make_your_own_adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWo-nj-QT7"/>
+                        <viewControllerLayoutGuide type="bottom" id="vQc-vH-wv0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jZF-gd-S63">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Good." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Jn-rR-sSu">
+                                <rect key="frame" x="180" y="150" width="240" height="158"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="TmQ-of-1XI"/>
+                                    <constraint firstAttribute="height" constant="158" id="kZ1-w5-xeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Jn-rR-sSu" firstAttribute="top" secondItem="kWo-nj-QT7" secondAttribute="bottom" constant="86" id="4fG-QG-bgg"/>
+                            <constraint firstItem="5Jn-rR-sSu" firstAttribute="centerX" secondItem="jZF-gd-S63" secondAttribute="centerX" id="9gK-PE-f88"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8F2-ed-Rmx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQU-z7-dkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="1460"/>
         </scene>
     </scenes>
 </document>
